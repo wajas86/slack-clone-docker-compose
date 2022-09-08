@@ -1,12 +1,16 @@
 services:
   slackfrontend:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.reactUI
     ports:
       - "888:3000"    
     depends_on:
       - db
   nodebackend: 
-    build: server/
+    build:
+      context: ./server
+      dockerfile: Dockerfile.node
     ports: 
       - "9000:9000"    #external:internal 
     depends_on:
