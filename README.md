@@ -1,6 +1,20 @@
 # Containerizing a Slack Clone App Built with the MERN Stack
 
+
+
+
+## Prerequisite
+
+- MongoDB
+- Express
+- React.js
+- Node
+- Docker Desktop
+
+
 ## Getting Started
+
+
 
 ## Cloning the repository
 
@@ -15,6 +29,9 @@
  docker compose up -d —build
 ```
 
+![image](https://user-images.githubusercontent.com/313480/193378996-14ce3feb-5087-4e14-b07d-a350e6eb133c.png)
+
+
 ```
  docker compose ps
                Name                             Command               State            Ports        -----------------------------------------------------------------------------
@@ -25,8 +42,14 @@ slack-clone-docker_slackfrontend_1   docker-entrypoint.sh yarn  ...   Up
 
 ## Viewing the containers via Docker Dashboard
 
+![image](https://user-images.githubusercontent.com/313480/193378961-6fcefc7e-916d-4f13-a527-29e419ef539a.png)
+
+
 
 ## Viewing the Messages
+
+![image](https://user-images.githubusercontent.com/313480/193378966-47b765ce-087a-4405-8cb7-052cc3e58ae0.png)
+
 
 
 
