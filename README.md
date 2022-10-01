@@ -1,73 +1,56 @@
-# Getting Started with Create React App
+# Containerizing a Slack Clone App Built with the MERN Stack
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `yarn start`
+## Prerequisite
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- MongoDB
+- Express
+- React.js
+- Node
+- Docker Desktop
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Cloning the repository
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+ git clone https://github.com/dockersamples/slack-clone-docker
+```
 
-### `yarn eject`
+## Building the Service containers
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+ docker compose up -d —build
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![image](https://user-images.githubusercontent.com/313480/193378996-14ce3feb-5087-4e14-b07d-a350e6eb133c.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+ docker compose ps
+               Name                             Command               State            Ports        -----------------------------------------------------------------------------
+slack-clone-docker_db_1              docker-entrypoint.sh mongod      Up      0.0.0.0:27017->27017/tcp
+slack-clone-docker_nodebackend_1     docker-entrypoint.sh node  ...   Up      0.0.0.0:9000->9000/tcp 
+slack-clone-docker_slackfrontend_1   docker-entrypoint.sh yarn  ...   Up 
+```
 
-## Learn More
+## Viewing the containers via Docker Dashboard
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![image](https://user-images.githubusercontent.com/313480/193378961-6fcefc7e-916d-4f13-a527-29e419ef539a.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Viewing the Messages
 
-### Analyzing the Bundle Size
+![image](https://user-images.githubusercontent.com/313480/193378966-47b765ce-087a-4405-8cb7-052cc3e58ae0.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Slack-Clone---MERN-Stack
-# slack_clone_local_w_docker_compose
-# slack_clone_local_w_docker_compose
